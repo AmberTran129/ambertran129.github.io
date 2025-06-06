@@ -3,104 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anh Tran – Product Owner</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Anh Tran – Product Owner / Business Analyst</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Anh Tran – Product Owner & Business Analyst with 5+ years experience in IT. Passionate problem solver and technology enthusiast." />
+  <meta name="keywords" content="Anh Tran, Business Analyst, Product Owner, IT, Technology, Blog, Portfolio" />
+  <meta name="author" content="Anh Tran" />
+  <meta property="og:title" content="Anh Tran – Product Owner / Business Analyst" />
+  <meta property="og:description" content="Explore the blog, products, and professional profile of Anh Tran, an experienced business analyst and product owner." />
+  <meta property="og:image" content="https://www.gravatar.com/avatar/fe84d8fdc219e3f87e3837f1882d0831?s=200" />
+  <meta property="og:url" content="https://ambertran129.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #ecf87f;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1490111718993-d98654ce6cf7?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    /* Gray overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
     }
 
     .container {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 30px;
-      background-color: #fff;
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      width: 90%;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       text-align: center;
+      backdrop-filter: blur(6px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     img.profile {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 1rem;
       object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.2rem;
+      margin: 0.2em 0 0.1em;
+      font-size: 1.8em;
     }
 
     h2 {
-      font-size: 1.2rem;
-      color: #777;
-      margin-bottom: 1.5rem;
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: 300;
+      color: #ccc;
     }
 
     p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+      margin-top: 1em;
+      font-size: 1em;
+      line-height: 1.5;
     }
 
     .buttons {
+      margin-top: 1.5rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
+      gap: 1rem;
     }
 
-    a.button {
-      background: #f1c0b9;
+    .buttons a {
+      background-color: #f1c0b9;
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s ease;
+      padding: 0.6em 1.2em;
+      border-radius: 8px;
+      border: 1px solid #ffffff44;
+      transition: background 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
     }
 
-    a.button:hover {
-      background: #3e9142;
+    .buttons a:hover {
+      background-color: #3e9142;
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 0.95em;
+      }
+
+      .buttons a {
+        padding: 0.5em 1em;
+      }
+    }
+
+    .credit {
+      margin-top: 2rem;
+      font-size: 0.8em;
       color: #aaa;
+      text-align: center;
+    }
+
+    .credit a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .credit a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="container">
-<img src="https://www.gravatar.com/avatar/dffc970c8058ba9fe58d3c933fb72d94?s=400" alt="Anh Tran" class="profile" />
+    <img
+      src="https://www.gravatar.com/avatar/fe84d8fdc219e3f87e3837f1882d0831?s=200"
+      alt="Anh Tran"
+      class="profile"
+    />
     <h1>Anh Tran</h1>
     <h2>Product Owner / Business Analyst</h2>
-
     <p>
-      With over 5 years of experience in the IT industry as a Business Analyst, I'm passionate about solving meaningful problems and creating impactful digital products. I value logic, critical thinking, and optimism in an ever-evolving world of high technology. I love connecting with people and bringing value to those around me.
+      Over 5 years as a business analyst in the IT industry, passionate about solving problems, bringing value to everyone around me. Logical and critical thinker, optimistic about the future of high technology, and love to connect.
     </p>
-    
- <div class="buttons">
-    <a class="button" href="https://immense-eoraptor-e48.notion.site/HOMEPAGE-20a0819cea93809bb844e954bcee10fa" target="_blank">📝 Blog</a>
-    <a class="button" href="https://yourproductlink.com" target="_blank">👇My Products</a>
-    <a class="button" href="https://www.linkedin.com/in/tran-ngocanh" target="_blank">💼 LinkedIn</a>
-    <a class="button" href="https://www.instagram.com/anssamy__/#" target="_blank">📸 Instagram</a>
-    <a class="button" href="mailto:anhthingoctran129@gmail.com?subject=Just%20wanted%20to%20say%20hi!">📩 Share / Contact</a>
-  </div>
-
-    <footer>
-      &copy; 2025 Anh Tran – Built with ❤️ on GitHub Pages
-    </footer>
+    <div class="buttons">
+      <a href="https://immense-eoraptor-e48.notion.site/HOMEPAGE-20a0819cea93809bb844e954bcee10fa" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-book"></i> Blog
+      </a>
+      <a href="https://gumroad.com/yourproduct" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-shopping-cart"></i> Products
+      </a>
+      <a href="https://www.linkedin.com/in/tran-ngocanh" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://www.instagram.com/anssamy__/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="mailto:anhthingoctran129@gmail.com?subject=Just%20wanted%20to%20say%20hi!">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+    </div>
+    <p class="credit">
+      Background photo by
+      <a href="https://unsplash.com/@clarissemeyer" target="_blank" rel="noopener noreferrer">Clarisse Meyer</a>
+      on
+      <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
+    </p>
   </div>
 </body>
 </html>
-
