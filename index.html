@@ -1,188 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anh Tran – Product Owner / Business Analyst</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tran Thi Ngoc Anh - Product Owner & Business Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- SEO Meta -->
-  <meta name="description" content="Anh Tran – Product Owner & Business Analyst with 5+ years experience in IT. Passionate problem solver and technology enthusiast." />
-  <meta name="keywords" content="Anh Tran, Business Analyst, Product Owner, IT, Technology, Blog, Portfolio" />
-  <meta name="author" content="Anh Tran" />
-  <meta property="og:title" content="Anh Tran – Product Owner / Business Analyst" />
-  <meta property="og:description" content="Explore the blog, products, and professional profile of Anh Tran, an experienced business analyst and product owner." />
-  <meta property="og:image" content="https://www.gravatar.com/avatar/fe84d8fdc219e3f87e3837f1882d0831?s=200"/>
-  <meta property="og:url" content="https://ambertran129.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
 
-  <!-- Font Awesome CDN for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+        /* Earth tone color palette */
+        :root {
+            --earth-primary: #6B4423;
+            --earth-secondary: #8B6F47;
+            --earth-accent: #A0826D;
+            --earth-light: #D4C5B9;
+            --earth-dark: #3E2723;
+            --earth-green: #556B2F;
+        }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://images.unsplash.com/photo-1648567537289-3f8ce5c9ac09?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
+        header {
+            position: relative;
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3B2D24;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1648567537289-3f8ce5c9ac09?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(59, 45, 36, 0.5), rgba(59, 45, 36, 0.6));
+            z-index: 1;
+        }
 
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 600px;
-      width: 90%;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      text-align: center;
-      backdrop-filter: blur(6px);
-      animation: fadeInUp 1s ease forwards;
-    }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(107, 68, 35, 0.1);
+        }
 
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
 
-    img.profile {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 1rem;
-      object-fit: cover;
-    }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            object-fit: cover;
+            background: white;
+        }
 
-    h1 {
-      margin: 0.2em 0 0.1em;
-      font-size: 1.8em;
-    }
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-    h2 {
-      margin: 0;
-      font-size: 1.1em;
-      font-weight: 300;
-      color: #ccc;
-    }
+        .tagline {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
 
-    p {
-      margin-top: 1em;
-      font-size: 1em;
-      line-height: 1.5;
-    }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
 
-    .buttons {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
-    .buttons a {
-      background-color: #ecf87f;
-      color: white;
-      text-decoration: none;
-      padding: 0.6em 1.2em;
-      border-radius: 8px;
-      border: 1px solid #3d550c;
-      transition: background 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 500;
-    }
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
 
-    .buttons a:hover {
-      background-color: #f1c0b9;
-    }
+        .social-btn.download {
+            background: var(--earth-green);
+            border-color: var(--earth-green);
+        }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5em;
-      }
+        .social-btn.download:hover {
+            background: #6B8E23;
+            border-color: #6B8E23;
+        }
 
-      p {
-        font-size: 0.95em;
-      }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
 
-      .buttons a {
-        padding: 0.5em 1em;
-      }
-    }
+        .contact-info a, .contact-info span {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
 
-    .credit {
-      margin-top: 2rem;
-      font-size: 0.8em;
-      color: #aaa;
-      text-align: center;
-    }
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .credit a {
-      color: #ccc;
-      text-decoration: none;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 15px 0;
+        }
 
-    .credit a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        nav a {
+            color: var(--earth-primary);
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--earth-secondary);
+        }
+
+        section {
+            background: white;
+            margin: 40px auto;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--earth-primary);
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--earth-secondary);
+        }
+
+        h3 {
+            color: var(--earth-secondary);
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .summary-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--earth-secondary);
+        }
+
+        .skill-category h4 {
+            color: var(--earth-primary);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            color: #666;
+        }
+
+        .skill-category li::before {
+            content: "▹ ";
+            color: var(--earth-secondary);
+            font-weight: bold;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title {
+            flex: 1;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .company {
+            color: var(--earth-secondary);
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .project-name {
+            background: var(--earth-light);
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+            color: var(--earth-dark);
+            font-weight: 600;
+        }
+
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .tech-stack strong {
+            color: var(--earth-primary);
+        }
+
+        ul.responsibilities {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.responsibilities li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: var(--earth-primary);
+            font-size: 1.1em;
+        }
+
+        .university {
+            color: var(--earth-secondary);
+            margin-top: 5px;
+        }
+
+        .cert-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--earth-secondary);
+        }
+
+        .cert-title {
+            font-weight: 600;
+            color: var(--earth-primary);
+            margin-bottom: 5px;
+        }
+
+        .cert-details {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        footer {
+            background: var(--earth-primary);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .photo-credit {
+            font-size: 0.85em;
+            opacity: 0.8;
+            margin-top: 30px;
+        }
+
+        .photo-credit a {
+            color: var(--earth-light);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 60px 0 50px;
+                background-attachment: scroll;
+            }
+        }
+
+        .projects-leadership li {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .projects-leadership strong {
+            color: var(--earth-primary);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-  <img src="https://www.gravatar.com/avatar/fe84d8fdc219e3f87e3837f1882d0831?s=200" alt="Anh Tran" />
-    <h1>Anh Tran</h1>
-    <h2>Product Owner / Business Analyst</h2>
-    <p>
-      Over 5 years as a business analyst in the IT industry, passionate about solving problems, bringing value to everyone around me. Logical and critical thinker, optimistic about the future of high technology, and love to connect.
-    </p>
-    <div class="buttons">
-      <a href="https://immense-eoraptor-e48.notion.site/HOMEPAGE-20a0819cea93809bb844e954bcee10fa" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-book"></i> Blog
-      </a>
-      <a href="https://gumroad.com/yourproduct" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-shopping-cart"></i> Products
-      </a>
-      <a href="https://www.linkedin.com/in/tran-ngocanh" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://www.instagram.com/anssamy__/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="mailto:anhthingoctran129@gmail.com?subject=Just%20wanted%20to%20say%20hi!">
-        <i class="fas fa-envelope"></i> Contact
-      </a>
-    </div>
-    <p class="credit">
-      Background photo by
-      <a href="https://unsplash.com/@ioarctic" target="_blank" rel="noopener noreferrer">Arctic</a>
-      on
-      <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
-    </p>
-  </div>
-</body>
-</html>
+    <header>
+        <div class="header-content">
+            <div class="container">
+                <img src="profile-photo.jpg" alt="Tran Thi Ngoc Anh" class="profile-img" id="profileImg">
+                <h1>TRAN THI NGOC ANH</h1>
+                <p class="tagline">Product Owner / Business Analyst</p>
+                
+                <div class="social-buttons">
+                    <a href="https://www.linkedin.com/in/tran-ngocanh" target="_blank" class="social-btn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/anssamy__/" target="_blank" class="social-btn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagram
+                    </a>
+                    <a href="https://immense-eoraptor-e48.notion.site/HOMEPAGE-20a0819cea93809bb844e954bcee10fa" target="_blank" class="social-btn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
+                        Blog
+                    </a>
+                    <a href="mailto:anhtrangoctran129@gmail.com" class="social-btn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                        Email
+                    </a>
+                    <a href="#" class="social-btn download" onclick="downloadResume(); return false;">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Resume
+                    </a>
+                </div>
 
+                <div class="contact-info">
+                    <a href="tel:+84358270404">📞 (+84) 358 270 404</a>
+                    <span>📍 Ho Chi Minh City</span>
+                </div>
+
+                <div class="photo-credit">
+                    Background photo by <a href="https://unsplash.com/@ioarctic" target="_blank">Arctic</a> on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p class="summary-text">
+                Business-oriented Product Owner and Business Analyst with 6+ years of experience delivering SaaS and ERP-like platforms across logistics, telecom, and accounting domains. Skilled at translating business requirements into system configuration, supporting full project lifecycles from discovery to implementation, and providing functional assistance and training to clients. Experienced in working with international clients, leading requirement workshops, and aligning stakeholders to deliver measurable business value.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Product Management</h4>
+                    <ul>
+                        <li>Backlog Grooming & Prioritization</li>
+                        <li>Roadmapping & Feature Prioritization</li>
+                        <li>User Story Creation (INVEST Criteria)</li>
+                        <li>Stakeholder Management</li>
+                        <li>Release Coordination</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Data & Analytics</h4>
+                    <ul>
+                        <li>Integration Analysis (REST, GraphQL APIs)</li>
+                        <li>Database Modeling (PostgreSQL, MongoDB)</li>
+                        <li>Analytic Workflows (BPMN, UML diagrams)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Agile Delivery</h4>
+                    <ul>
+                        <li>Sprint Planning Reviews/Retrospectives</li>
+                        <li>Jira, Confluence, Miro</li>
+                        <li>Cross-Functional Team Leadership</li>
+                        <li>Mentoring & Training</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Domain & Soft Skills</h4>
+                    <ul>
+                        <li>Telecom, Geolocation Data, Shipping Logistics</li>
+                        <li>MOOC, CRM, Accounting, Inventory</li>
+                        <li>Problem-Solving</li>
+                        <li>Cross-functional Team Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Senior Business Analyst</h3>
+                        <p class="company">Cyberagent Vietnam - Proxy Product Owner</p>
+                    </div>
+                    <span class="date">Mar 2024 – Present</span>
+                </div>
+                
+                <div class="project-name">Project: CHORUS - Facility Management Module</div>
+                <p><strong>Context:</strong> Streamlining the Procurement & Facility Management</p>
+                <ul class="responsibilities">
+                    <li>Re-designed facility management solution with feedback for features in Milestone 1, 2 from business users</li>
+                    <li>Owned product vision & roadmap from inception, created User Stories, Map user journey and feature impact & user pain points, ensuring 100% requirement clarity among 5 internal teams and 1 client team</li>
+                    <li>Defined and executed the product roadmap, user journey mapping, and user story mapping for facility management (FCM), integrated with Booking, Visual Management, Reporting, Proxy Product Owner Equipment Management, Equipment Loans, and Work Order modules</li>
+                    <li>Translated business and operational needs into epics, user stories, and acceptance criteria, ensuring clarity and technical feasibility</li>
+                    <li>Managed stakeholders and partners, facilitated workshops and sequenced features into 4 main product releases</li>
+                    <li>Co-designed UI/UX wireframes with designers in Figma, resolved integration blockers for work orders & AP invoices, improving documentation efficiency by 40%</li>
+                </ul>
+		<div class="client">
+                    <strong>Client:</strong> Ocean Network Express | <strong>Project Size:</strong> 50+ members using Scrum/Agile Methodology
+                </div>
+		<div class="projectsize">
+                    <strong>Project Size:</strong>Internal team: 24 members using Scrum/Agile Methodology, mainly integrated with 6 external teams and the CHORUS ecosystem
+		</div>
+                <div class="projectsize">
+                    <strong>Tech Stack:</strong> JavaScript, Microservices, Apollo GraphQL, REST APIs, PostgreSQL, Kubernetes, Google Cloud, Kafka, Jira, Confluence, Figma
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Proxy Product Owner</h3>
+                        <p class="company">CyberLogitec Vietnam</p>
+                    </div>
+                    <span class="date">Jan 2024 – May 2024</span>
+                </div>
+                
+                <div class="project-name">Project: CARIS - Accounting Module</div>
+                <p><strong>Context:</strong> Accounting operation of Freight Forwarding SaaS system</p>
+                <ul class="responsibilities">
+                    <li>Successfully analyzed the legacy system for multi-level AP & POC Reconciliation report enhancement to deliver solution on time</li>
+                    <li>Gathered and documented accounting process requirements, interacted with clients to inform ERP configuration and solution design</li>
+                    <li>Translated business needs into epics, user stories, test cases, and demos to deliver testing dashboard for clients</li>
+                    <li>Proposed expense criteria & governance standards, ensuring compliant, high-quality releases</li>
+                    <li>Completed risk testing phase on time, mainly involved UAT testing to reproduce issues, prepared test data, and user guidelines and test cases</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Java, TypeScript, RxJs, PostgreSQL, AWS, ClickUp, Notion
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Senior Business Analyst</h3>
+                        <p class="company">FPT Software Vietnam</p>
+                    </div>
+                    <span class="date">Apr 2023 – Mar 2024</span>
+                </div>
+                
+                <div class="project-name">Project: NextGen Platform - An ride-hailing platform</div>
+                <ul class="responsibilities">
+                    <li>Developed roadmaps for data-driven features for loyalty systems, payment APIs with Adyen, and defined success metrics that reduced integration errors by 30% via Data-Driven Integration</li>
+                    <li>Collaborated with product designers on passenger and driver app experiences, ensuring consistent component design and micro-interactions</li>
+                    <li>Co-created 150+ mockups with designers to enhance user experience</li>
+                    <li>Led SIT/UAT across 3 live-projects; validated geolocation data pipelines for real-time accuracy to 98%</li>
+                    <li>Enhanced driver and passenger onboarding UX, contributing to higher app retention in post-launch analysis</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> AngularJS, Java, GraphQL, REST APIs, MongoDB, PostgreSQL, Kubernetes, AWS
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Business Analyst cum Product Owner</h3>
+                        <p class="company">Infodation Vietnam</p>
+                    </div>
+                    <span class="date">Nov 2020 – Mar 2023</span>
+                </div>
+                
+                <div class="project-name">Project: NextGen Telecom - A Telecom SaaS Platform</div>
+                <ul class="responsibilities">
+                    <li>Delivered a map-based Availability Check module, integrating BAG (Dutch address registry) and OpenStreetMap UI for fiber coverage visualization</li>
+                    <li>Led creation of an All-in-1 Order widget using Next.js, GraphQL, MongoDB</li>
+                    <li>Managed product backlog and roadmaps in Jira Confluence, prioritizing 100+ features across Availability, Build, and Address Management modules</li>
+                    <li>Enhanced API product enhancements for 3rd-party connectors and Admin UI</li>
+                    <li>Completed penetration testing for ISO certification, mentored 2 junior BAs, boosting team velocity by 15%</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> AngularJS, Java, GraphQL, Next.js, MongoDB, Kubernetes, Google Cloud
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Business Analyst</h3>
+                        <p class="company">Infodation Vietnam - Sportpartner</p>
+                    </div>
+                    <span class="date">Sep 2019 – Nov 2020</span>
+                </div>
+                
+                <div class="project-name">A Fitness & Social Networking platform</div>
+                <ul class="responsibilities">
+                    <li>Analyzed requirements via creating BPMN and use case user stories</li>
+                    <li>Conducted usability testing and iterated based on behavior insights and feedback loops</li>
+                    <li>Proposed visual improvements for desktop and mobile interaction</li>
+                    <li>Conducted UAT on web/mobile for go-live application successfully</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Kubernetes, RabbitMQ, ElasticSearch, MySQL, .NET
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">
+                        <h3>Customer Service and Support</h3>
+                        <p class="company">DEPDEP Vietnam, Disruptiv Pty Ltd (Australia)</p>
+                    </div>
+                    <span class="date">Sep 2019 – Nov 2020</span>
+                </div>
+                
+                <div class="project-name">DEPDEP.VN - Beauty, Wellness, Fitness Online Booking Portal</div>
+                <ul class="responsibilities">
+                    <li>Completed tasks involving translating Vietnamese to English (and vice-versa), content verification, collecting and researching information online to enable the development of venue-specific profile landing pages</li>
+                    <li>Involved in the creation of social media posts (text & video-based), electronic flyers, and issuing marketing communications via social media channels</li>
+                    <li>Supported migration activities, sitemap creation, and image processing on the website</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Kubernetes, RabbitMQ, ElasticSearch, MySQL, .NET
+                </div>
+            </div>
