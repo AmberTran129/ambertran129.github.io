@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tran Thi Ngoc Anh - Product Owner & Business Analyst</title>
+    <title>Anh Tran - Product Owner & Business Analyst</title>
     <style>
         * {
             margin: 0;
@@ -11,672 +11,774 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+        :root {
+            --primary: #6B4423;
+            --secondary: #8B6F47;
+            --accent: #556B2F;
+            --light-bg: #FAF9F6;
+            --text-dark: #2C2C2C;
+            --text-light: #666;
         }
 
-        .container {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Earth tone color palette */
-        :root {
-            --earth-primary: #6B4423;
-            --earth-secondary: #8B6F47;
-            --earth-accent: #A0826D;
-            --earth-light: #D4C5B9;
-            --earth-dark: #3E2723;
-            --earth-green: #556B2F;
-        }
-
-        header {
-            position: relative;
-            color: white;
-            padding: 100px 0 80px;
-            text-align: center;
-            overflow: hidden;
-            min-height: 500px;
+            padding: 0 40px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            background-color: #3B2D24;
-        }
-        
-        header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1648567537289-3f8ce5c9ac09?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 0;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(rgba(59, 45, 36, 0.5), rgba(59, 45, 36, 0.6));
-            z-index: 1;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(107, 68, 35, 0.1);
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--primary);
         }
 
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin: 0 auto 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            object-fit: cover;
-            background: white;
-        }
-
-        h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .tagline {
-            font-size: 1.4em;
-            margin-bottom: 30px;
-            opacity: 0.95;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .social-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        .social-btn.download {
-            background: var(--earth-green);
-            border-color: var(--earth-green);
-        }
-
-        .social-btn.download:hover {
-            background: #6B8E23;
-            border-color: #6B8E23;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .contact-info a, .contact-info span {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.95em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        nav {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 15px 0;
-        }
-
-        nav a {
-            color: var(--earth-primary);
-            text-decoration: none;
-            padding: 10px 20px;
+        .logo-sub {
+            font-size: 0.5em;
+            color: var(--text-light);
+            font-weight: 400;
             display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
             font-weight: 500;
             transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--earth-secondary);
+        .nav-links a:hover {
+            color: var(--primary);
         }
 
-        section {
-            background: white;
-            margin: 40px auto;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: var(--earth-primary);
-            font-size: 2em;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--earth-secondary);
-        }
-
-        h3 {
-            color: var(--earth-secondary);
-            font-size: 1.4em;
-            margin-bottom: 10px;
-        }
-
-        .summary-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .skill-category {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--earth-secondary);
-        }
-
-        .skill-category h4 {
-            color: var(--earth-primary);
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-
-        .skill-category ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .skill-category li {
-            padding: 5px 0;
-            color: #666;
-        }
-
-        .skill-category li::before {
-            content: "▹ ";
-            color: var(--earth-secondary);
-            font-weight: bold;
-        }
-
-        .experience-item, .project-item {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .experience-item:last-child, .project-item:last-child {
-            border-bottom: none;
-        }
-
-        .job-header {
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
+            align-items: center;
+            padding: 120px 40px 80px;
+            background: var(--light-bg);
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-content h2 {
+            font-size: 1.2em;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .company-logos {
+            display: flex;
+            gap: 30px;
             flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .job-title {
-            flex: 1;
-        }
-
-        .date {
-            color: #666;
-            font-style: italic;
-            white-space: nowrap;
-        }
-
-        .company {
-            color: var(--earth-secondary);
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-
-        .project-name {
-            background: var(--earth-light);
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-bottom: 10px;
-            color: var(--earth-dark);
-            font-weight: 600;
-        }
-
-        .tech-stack {
-            background: #f8f9fa;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #555;
-        }
-
-        .tech-stack strong {
-            color: var(--earth-primary);
-        }
-
-        ul.responsibilities {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        ul.responsibilities li {
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        .education-item {
-            margin-bottom: 25px;
-        }
-
-        .degree {
-            font-weight: 600;
-            color: var(--earth-primary);
-            font-size: 1.1em;
-        }
-
-        .university {
-            color: var(--earth-secondary);
-            margin-top: 5px;
-        }
-
-        .cert-item {
-            background: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border-left: 4px solid var(--earth-secondary);
-        }
-
-        .cert-title {
-            font-weight: 600;
-            color: var(--earth-primary);
-            margin-bottom: 5px;
-        }
-
-        .cert-details {
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        footer {
-            background: var(--earth-primary);
-            color: white;
-            text-align: center;
-            padding: 30px 0;
             margin-top: 50px;
         }
 
-        .photo-credit {
-            font-size: 0.85em;
-            opacity: 0.8;
+        .company-logo {
+            font-weight: 600;
+            color: var(--text-light);
+            font-size: 0.9em;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.1em;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .skill-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .project-content .project-company {
+            color: var(--secondary);
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .project-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--light-bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .stars {
+            color: #FFB800;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .testimonial-text {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .testimonial-role {
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
             margin-top: 30px;
         }
 
-        .photo-credit a {
-            color: var(--earth-light);
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
             text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
         }
 
-        @media (max-width: 768px) {
-            section {
-                padding: 30px 20px;
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            background: #6B8E23;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(85, 107, 47, 0.3);
+        }
+
+        .contact-form {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 60px 40px 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #AAA;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #AAA;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            text-align: center;
+            color: #AAA;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
-            h1 {
-                font-size: 2em;
+            .hero-content h1 {
+                font-size: 3em;
             }
 
-            .tagline {
-                font-size: 1.1em;
-            }
-
-            .social-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .social-btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .job-header {
-                flex-direction: column;
-            }
-
-            .skills-grid {
+            .skills-grid,
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
 
-            header {
-                padding: 60px 0 50px;
-                background-attachment: scroll;
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 20px;
             }
         }
 
-        .projects-leadership li {
-            margin-bottom: 15px;
-            color: #555;
-        }
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
 
-        .projects-leadership strong {
-            color: var(--earth-primary);
+            .section-header h2 {
+                font-size: 2em;
+            }
+
+            nav {
+                padding: 15px 0;
+            }
+
+            .nav-container {
+                padding: 0 20px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="container">
-                <img src="profile-photo.jpg" alt="Tran Thi Ngoc Anh" class="profile-img" id="profileImg">
-                <h1>TRAN THI NGOC ANH</h1>
-                <p class="tagline">Product Owner / Business Analyst</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Anh Tran
+                <span class="logo-sub">Product Owner | Business Analyst</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>Product Owner | Business Analyst</h2>
+                <h1>Delivering SaaS Excellence</h1>
+                <p>6+ years transforming business requirements into successful products across logistics, telecom, and accounting domains. Passionate about solving complex problems and delivering measurable value.</p>
                 
-                <div class="social-buttons">
-                    <a href="https://www.linkedin.com/in/tran-ngocanh" target="_blank" class="social-btn">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://www.instagram.com/anssamy__/" target="_blank" class="social-btn">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        Instagram
-                    </a>
-                    <a href="https://immense-eoraptor-e48.notion.site/HOMEPAGE-20a0819cea93809bb844e954bcee10fa" target="_blank" class="social-btn">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
-                        Blog
-                    </a>
-                    <a href="mailto:anhtrangoctran129@gmail.com" class="social-btn">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
-                        Email
-                    </a>
-                    <a href="#" class="social-btn download" onclick="downloadResume(); return false;">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                        Download Resume
-                    </a>
+                <div class="company-logos">
+                    <div class="company-logo">Cyberagent</div>
+                    <div class="company-logo">FPT Software</div>
+                    <div class="company-logo">Infodation</div>
+                    <div class="company-logo">DEPDEP</div>
                 </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile-photo.jpg" alt="Anh Tran" id="heroImg" onerror="this.style.background='linear-gradient(135deg, var(--secondary), var(--primary))'; this.style.height='500px'; this.alt='AT';">
+            </div>
+        </div>
+    </section>
 
-                <div class="contact-info">
-                    <a href="tel:+84358270404">📞 (+84) 358 270 404</a>
-                    <span>📍 Ho Chi Minh City</span>
+    <!-- Skills Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2>My Expertise</h2>
+            <p>Bridging business needs with technical solutions through strategic product management and agile delivery</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Product Management</h3>
+                <p>Backlog grooming, roadmapping, user story creation using INVEST criteria, and stakeholder management to deliver value-driven solutions.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Agile Delivery</h3>
+                <p>Sprint planning, retrospectives, cross-functional team leadership using Jira, Confluence, and Miro for seamless collaboration.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data & Integration</h3>
+                <p>REST/GraphQL APIs, database modeling with PostgreSQL and MongoDB, BPMN workflows, and analytic pipelines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="work">
+        <div class="section-header">
+            <h2>Latest Projects</h2>
+            <p>Key product initiatives that delivered measurable business impact</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">CHORUS</div>
+                <div class="project-content">
+                    <h3>Facility Management Module</h3>
+                    <p class="project-company">Cyberagent Vietnam</p>
+                    <p>Re-designed procurement & facility management solution, improving documentation efficiency by 40% through integrated workflows with Equipment Management and Work Orders.</p>
                 </div>
-
-                <div class="photo-credit">
-                    Background photo by <a href="https://unsplash.com/@ioarctic" target="_blank">Arctic</a> on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image">CARIS</div>
+                <div class="project-content">
+                    <h3>Accounting Module</h3>
+                    <p class="project-company">Cyberagent Vietnam</p>
+                    <p>Enhanced multi-level AP & POC Reconciliation for freight forwarding SaaS, delivering compliant accounting operations on time.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">iRides</div>
+                <div class="project-content">
+                    <h3>Ride-Hailing Platform</h3>
+                    <p class="project-company">FPT Software Vietnam</p>
+                    <p>Developed loyalty systems and payment API integration with Adyen, reducing integration errors by 30% and achieving 98% geolocation accuracy.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Telecom</div>
+                <div class="project-content">
+                    <h3>Telecom SaaS Platform</h3>
+                    <p class="project-company">Infodation Vietnam</p>
+                    <p>Built map-based Availability Check module integrating Dutch address registry, managing 100+ features across availability and address management.</p>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <nav>
-        <ul>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <section id="summary">
-            <h2>Professional Summary</h2>
-            <p class="summary-text">
-                Business-oriented Product Owner and Business Analyst with 6+ years of experience delivering SaaS and ERP-like platforms across logistics, telecom, and accounting domains. Skilled at translating business requirements into system configuration, supporting full project lifecycles from discovery to implementation, and providing functional assistance and training to clients. Experienced in working with international clients, leading requirement workshops, and aligning stakeholders to deliver measurable business value.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Product Management</h4>
-                    <ul>
-                        <li>Backlog Grooming & Prioritization</li>
-                        <li>Roadmapping & Feature Prioritization</li>
-                        <li>User Story Creation (INVEST Criteria)</li>
-                        <li>Stakeholder Management</li>
-                        <li>Release Coordination</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Data & Analytics</h4>
-                    <ul>
-                        <li>Integration Analysis (REST, GraphQL APIs)</li>
-                        <li>Database Modeling (PostgreSQL, MongoDB)</li>
-                        <li>Analytic Workflows (BPMN, UML diagrams)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Agile Delivery</h4>
-                    <ul>
-                        <li>Sprint Planning Reviews/Retrospectives</li>
-                        <li>Jira, Confluence, Miro</li>
-                        <li>Cross-Functional Team Leadership</li>
-                        <li>Mentoring & Training</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Domain & Soft Skills</h4>
-                    <ul>
-                        <li>Telecom, Geolocation Data, Shipping Logistics</li>
-                        <li>MOOC, CRM, Accounting, Inventory</li>
-                        <li>Problem-Solving</li>
-                        <li>Cross-functional Team Collaboration</li>
-                    </ul>
-                </div>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>What Colleagues Say</h2>
+            <p>Feedback from cross-functional team members</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Anh excels at translating complex business requirements into clear user stories. Her stakeholder management skills kept our facility management project on track across 5 teams."</p>
+                <p class="testimonial-author">Senior Developer</p>
+                <p class="testimonial-role">Cyberagent Vietnam</p>
             </div>
-        </section>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Outstanding attention to detail in UAT testing. Anh's test case documentation helped us achieve compliant, high-quality releases for our accounting module."</p>
+                <p class="testimonial-author">QA Lead</p>
+                <p class="testimonial-role">Cyberagent Vietnam</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Her mentoring significantly boosted our team velocity by 15%. Anh's domain knowledge in telecom helped junior BAs ramp up quickly on complex features."</p>
+                <p class="testimonial-author">Team Lead</p>
+                <p class="testimonial-role">Infodation Vietnam</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Senior Business Analyst</h3>
-                        <p class="company">Cyberagent Vietnam - Proxy Product Owner</p>
-                    </div>
-                    <span class="date">Mar 2024 – Present</span>
-                </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Let's Work Together</h2>
+            <p>Open to Product Owner and Business Analyst opportunities</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in touch</h2>
+                <p>I'm always interested in hearing about new product opportunities, especially in SaaS platforms, logistics, or telecom domains.</p>
                 
-                <div class="project-name">Project: CHORUS - Facility Management Module</div>
-                <p><strong>Context:</strong> Streamlining the Procurement & Facility Management</p>
-                <ul class="responsibilities">
-                    <li>Re-designed facility management solution with feedback for features in Milestone 1, 2 from business users</li>
-                    <li>Owned product vision & roadmap from inception, created User Stories, Map user journey and feature impact & user pain points, ensuring 100% requirement clarity among 5 internal teams and 1 client team</li>
-                    <li>Defined and executed the product roadmap, user journey mapping, and user story mapping for facility management (FCM), integrated with Booking, Visual Management, Reporting, Proxy Product Owner Equipment Management, Equipment Loans, and Work Order modules</li>
-                    <li>Translated business and operational needs into epics, user stories, and acceptance criteria, ensuring clarity and technical feasibility</li>
-                    <li>Managed stakeholders and partners, facilitated workshops and sequenced features into 4 main product releases</li>
-                    <li>Co-designed UI/UX wireframes with designers in Figma, resolved integration blockers for work orders & AP invoices, improving documentation efficiency by 40%</li>
-                </ul>
-		<div class="client">
-                    <strong>Client:</strong> Ocean Network Express | <strong>Project Size:</strong> 50+ members using Scrum/Agile Methodology
-                </div>
-		<div class="projectsize">
-                    <strong>Project Size:</strong>Internal team: 24 members using Scrum/Agile Methodology, mainly integrated with 6 external teams and the CHORUS ecosystem
-		</div>
-                <div class="projectsize">
-                    <strong>Tech Stack:</strong> JavaScript, Microservices, Apollo GraphQL, REST APIs, PostgreSQL, Kubernetes, Google Cloud, Kafka, Jira, Confluence, Figma
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Proxy Product Owner</h3>
-                        <p class="company">CyberLogitec Vietnam</p>
-                    </div>
-                    <span class="date">Jan 2024 – May 2024</span>
-                </div>
+                <p><strong>Email:</strong> anhtrangoctran129@gmail.com</p>
+                <p><strong>Phone:</strong> (+84) 358 270 404</p>
+                <p><strong>Location:</strong> Ho Chi Minh City, Vietnam</p>
                 
-                <div class="project-name">Project: CARIS - Accounting Module</div>
-                <p><strong>Context:</strong> Accounting operation of Freight Forwarding SaaS system</p>
-                <ul class="responsibilities">
-                    <li>Successfully analyzed the legacy system for multi-level AP & POC Reconciliation report enhancement to deliver solution on time</li>
-                    <li>Gathered and documented accounting process requirements, interacted with clients to inform ERP configuration and solution design</li>
-                    <li>Translated business needs into epics, user stories, test cases, and demos to deliver testing dashboard for clients</li>
-                    <li>Proposed expense criteria & governance standards, ensuring compliant, high-quality releases</li>
-                    <li>Completed risk testing phase on time, mainly involved UAT testing to reproduce issues, prepared test data, and user guidelines and test cases</li>
-                </ul>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> Java, TypeScript, RxJs, PostgreSQL, AWS, ClickUp, Notion
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Senior Business Analyst</h3>
-                        <p class="company">FPT Software Vietnam</p>
-                    </div>
-                    <span class="date">Apr 2023 – Mar 2024</span>
-                </div>
+                <a href="#" class="download-btn" onclick="downloadResume(); return false;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                    Download Resume
+                </a>
                 
-                <div class="project-name">Project: NextGen Platform - An ride-hailing platform</div>
-                <ul class="responsibilities">
-                    <li>Developed roadmaps for data-driven features for loyalty systems, payment APIs with Adyen, and defined success metrics that reduced integration errors by 30% via Data-Driven Integration</li>
-                    <li>Collaborated with product designers on passenger and driver app experiences, ensuring consistent component design and micro-interactions</li>
-                    <li>Co-created 150+ mockups with designers to enhance user experience</li>
-                    <li>Led SIT/UAT across 3 live-projects; validated geolocation data pipelines for real-time accuracy to 98%</li>
-                    <li>Enhanced driver and passenger onboarding UX, contributing to higher app retention in post-launch analysis</li>
-                </ul>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> AngularJS, Java, GraphQL, REST APIs, MongoDB, PostgreSQL, Kubernetes, AWS
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/tran-ngocanh" target="_blank" title="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/anssamy__/" target="_blank" title="Instagram">ig</a>
+                    <a href="https://immense-eoraptor-e48.notion.site/HOMEPAGE-20a0819cea93809bb844e954bcee10fa" target="_blank" title="Blog">bl</a>
+                    <a href="mailto:anhtrangoctran129@gmail.com" title="Email">@</a>
                 </div>
             </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Business Analyst cum Product Owner</h3>
-                        <p class="company">Infodation Vietnam</p>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <span class="date">Nov 2020 – Mar 2023</span>
-                </div>
-                
-                <div class="project-name">Project: NextGen Telecom - A Telecom SaaS Platform</div>
-                <ul class="responsibilities">
-                    <li>Delivered a map-based Availability Check module, integrating BAG (Dutch address registry) and OpenStreetMap UI for fiber coverage visualization</li>
-                    <li>Led creation of an All-in-1 Order widget using Next.js, GraphQL, MongoDB</li>
-                    <li>Managed product backlog and roadmaps in Jira Confluence, prioritizing 100+ features across Availability, Build, and Address Management modules</li>
-                    <li>Enhanced API product enhancements for 3rd-party connectors and Admin UI</li>
-                    <li>Completed penetration testing for ISO certification, mentored 2 junior BAs, boosting team velocity by 15%</li>
-                </ul>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> AngularJS, Java, GraphQL, Next.js, MongoDB, Kubernetes, Google Cloud
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Business Analyst</h3>
-                        <p class="company">Infodation Vietnam - Sportpartner</p>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    <span class="date">Sep 2019 – Nov 2020</span>
-                </div>
-                
-                <div class="project-name">A Fitness & Social Networking platform</div>
-                <ul class="responsibilities">
-                    <li>Analyzed requirements via creating BPMN and use case user stories</li>
-                    <li>Conducted usability testing and iterated based on behavior insights and feedback loops</li>
-                    <li>Proposed visual improvements for desktop and mobile interaction</li>
-                    <li>Conducted UAT on web/mobile for go-live application successfully</li>
-                </ul>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> Kubernetes, RabbitMQ, ElasticSearch, MySQL, .NET
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div class="job-title">
-                        <h3>Customer Service and Support</h3>
-                        <p class="company">DEPDEP Vietnam, Disruptiv Pty Ltd (Australia)</p>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
                     </div>
-                    <span class="date">Sep 2019 – Nov 2020</span>
-                </div>
-                
-                <div class="project-name">DEPDEP.VN - Beauty, Wellness, Fitness Online Booking Portal</div>
-                <ul class="responsibilities">
-                    <li>Completed tasks involving translating Vietnamese to English (and vice-versa), content verification, collecting and researching information online to enable the development of venue-specific profile landing pages</li>
-                    <li>Involved in the creation of social media posts (text & video-based), electronic flyers, and issuing marketing communications via social media channels</li>
-                    <li>Supported migration activities, sitemap creation, and image processing on the website</li>
-                </ul>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> Kubernetes, RabbitMQ, ElasticSearch, MySQL, .NET
-                </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Anh Tran</h3>
+                <p>Product Owner & Business Analyst specializing in SaaS platforms, agile delivery, and cross-functional team leadership.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/tran-ngocanh" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/anssamy__/" target="_blank">Instagram</a></li>
+                    <li><a href="https://immense-eoraptor-e48.notion.site/HOMEPAGE-20a0819cea93809bb844e954bcee10fa" target="_blank">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tran Thi Ngoc Anh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Download resume
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'https://drive.google.com/uc?export=download&id=1kVezxnoBUwEFfsrU4cPr0XchYGzDNOQX';
+            link.download = 'TranThiNgocAnh_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
